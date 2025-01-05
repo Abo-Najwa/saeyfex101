@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فارس الشمري - مطور محترف</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            position: relative;
+            background: #0a192f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 1s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .shooting-star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #00c3ff, transparent);
+            border-radius: 50%;
+            animation: shoot 3s linear infinite;
+        }
+        @keyframes shoot {
+            0% { transform: translateX(-100%) translateY(-100%); opacity: 1; }
+            70% { opacity: 1; }
+            100% { transform: translateX(200%) translateY(200%); opacity: 0; }
+        }
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+        .subtitle {
+            font-size: 2rem;
+            color: #00c3ff;
+            margin: 1rem 0;
+            text-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+        }
+        .professional-section {
+            padding: 5rem 0;
+            background: #141414;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .skill-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        .skill-card h3 {
+            color: #00c3ff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .skill-card p {
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .skill-icon {
+            font-size: 3rem;
+            color: #00c3ff;
+            margin-bottom: 1rem;
+        }
+        .minecraft-overlay {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            background: rgba(0,0,0,0.7);
+            border-radius: 15px;
+            margin: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        .minecraft-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .minecraft-project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .minecraft-project:hover {
+            transform: scale(1.05);
+        }
+        .minecraft-project img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .note {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+        /* Hidden flag styles */
+        .hidden-flag {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Flag: CTF{F4r3s_1s_4_Pr0_M1n3cr4ft3r} -->
+    <div class="hero">
+        <div id="stars" class="stars"></div>
+        <div class="hero-content">
+            <h1>فارس الشمري</h1>
+            <p class="subtitle">مطور تقني محترف | خبير حلول برمجية | لاعب ماين كرافت محترف</p>
+            <div class="note">
+                <p>طبعا انا فارس الشمري ما اقدر اسوي (Port Forwarding) </p>
+            </div>
+            <!-- Hint: Check the source code carefully! -->
+            <div class="hidden-flag"><!-- ابحث عن صفحه معينه يمكن اسمك يمكن اي شي ثاني --></div>
+        </div>
+    </div>
+    <section class="professional-section">
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>تطوير البرمجيات</h3>
+                    <p>خبرة متميزة في تطوير حلول برمجية مبتكرة وفعالة للشركات والمؤسسات</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔒</div>
+                    <h3>أمن المعلومات</h3>
+                    <p>متخصص في تأمين البنية التحتية التقنية وحماية البيانات الحساسة</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>تطوير الأداء</h3>
+                    <p>خبرة في تحسين وتطوير أداء الأنظمة والتطبيقات للوصول لأفضل النتائج</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>إدارة المشاريع التقنية</h3>
+                    <p>قيادة المشاريع التقنية من التخطيط إلى التنفيذ مع ضمان أعلى معايير الجودة</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎮</div>
+                    <h3>ماين كرافت</h3>
+                    <p>لاعب محترف في ماين كرافت مع خبرة في تصميم وبناء العوالم والمباني الإبداعية</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🏗️</div>
+                    <h3>تصميم عوالم ماين كرافت</h3>
+                    <p>متخصص في إنشاء تصاميم مبتكرة وخرائط تفاعلية في عالم ماين كرافت</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const starsContainer = document.getElementById('stars');
+        
+        // Create regular stars
+        for(let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Create shooting stars
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            starsContainer.appendChild(star);
+            
+            setTimeout(() => {
+                star.remove();
+            }, 3000);
+        }
+
+        setInterval(createShootingStar, 2000);
+
+        // Console message for CTF players
+        console.log("هل تبحث عن شيء ما؟ جرب البحث في مصدر الصفحة!");
+    </script>
+</body>
+</html>
